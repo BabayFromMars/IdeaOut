@@ -25,11 +25,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1">
-        <schema name="BabayDB" object-types="column, function, procedure, table, view" />
-        <schema name="mysql" object-types="column, function, procedure, table, view" />
-        <schema name="performance_schema" object-types="column, function, procedure, table, view" />
-        <schema name="phpmyadmin" object-types="column, function, procedure, table, view" />
-        <schema name="sys" object-types="column, function, procedure, table, view" />
+        <schema name="BabayDB" object-types="function, procedure, table, view" />
+        <schema name="ForIdea" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
+        <schema name="information_schema" object-types="view" />
+        <schema name="mysql" object-types="table" />
+        <schema name="performance_schema" object-types="table" />
+        <schema name="phpmyadmin" object-types="table" />
+        <schema name="sys" object-types="table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -42,13 +44,35 @@
     <connection id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="mysql.event" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="ForIdea.o" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="phpmyadmin.pma__central_columns" active-filter-id="">
       <filter id="bf5aa619-4949-45f2-a0b9-f83fcbec934a" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="col_name" operator="=" value="" active="true" />
       </filter>
     </filter-list>
     <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="phpmyadmin.pma__bookmark" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="performance_schema.hosts" active-filter-id="">
+      <filter id="ff6c65e7-b1dd-44d4-9794-06feb0750ad3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="CURRENT_CONNECTIONS" operator="=" value="" active="true" />
+      </filter>
+    </filter-list>
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="ForIdea.s" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="performance_schema.accounts" active-filter-id="">
+      <filter id="0a941d5e-0119-47b9-a259-30c7ab9b619a" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="CURRENT_CONNECTIONS" operator="=" value="" active="true" />
+      </filter>
+    </filter-list>
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="mysql.help_topic" active-filter-id="">
+      <filter id="fe5152cd-998a-4abb-8b5c-c7c4a4eed036" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="help_topic_id" operator="=" value="" active="true" />
+      </filter>
+    </filter-list>
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="information_schema.CHARACTER_SETS" active-filter-id="EMPTY_FILTER">
+      <filter id="4892bb0e-f149-4255-88e4-a8f9b5e5273f" name="big5" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="CHARACTER_SET_NAME" operator="=" value="big5" active="true" />
+      </filter>
+    </filter-list>
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="mysql.event" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="BabayDB.Personal" active-filter-id="">
       <filter id="c68406c8-ecda-4ec3-b8b6-a28bd9d5e993" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="ID" operator="=" value="" active="true" />
@@ -59,22 +83,8 @@
         <condition column="variable" operator="=" value="" active="true" />
       </filter>
     </filter-list>
-    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="performance_schema.hosts" active-filter-id="">
-      <filter id="ff6c65e7-b1dd-44d4-9794-06feb0750ad3" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="CURRENT_CONNECTIONS" operator="=" value="" active="true" />
-      </filter>
-    </filter-list>
-    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="performance_schema.accounts" active-filter-id="">
-      <filter id="0a941d5e-0119-47b9-a259-30c7ab9b619a" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="CURRENT_CONNECTIONS" operator="=" value="" active="true" />
-      </filter>
-    </filter-list>
+    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="ForIdea.c" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="phpmyadmin.pma__savedsearches" active-filter-id="EMPTY_FILTER" />
-    <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="mysql.help_topic" active-filter-id="">
-      <filter id="fe5152cd-998a-4abb-8b5c-c7c4a4eed036" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="help_topic_id" operator="=" value="" active="true" />
-      </filter>
-    </filter-list>
     <filter-list connection-id="2e8a09bf-49c8-45b5-8f98-316005c1e7f1" dataset="phpmyadmin.pma__relation" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
